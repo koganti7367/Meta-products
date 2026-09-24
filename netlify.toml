@@ -1,0 +1,9 @@
+# No build command — these are plain static files, deployed as-is.
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
